@@ -1,7 +1,7 @@
 {
   "enabled": "true",
   "increase-coverage": {
-    "project-name": "corecooking",
+    "project-name": "dotnet-corecooking",
     "target-branches": [
       "main",
       "master"
@@ -9,7 +9,7 @@
     "test-env-docker-stage": "test",
     "build-test-env-docker-stage-script-path": "tool/build-test-env-docker-stage.sh",
     "test-files-folders": [
-      "CoreCooking.Models/Parsers/IngredientParser.cs"
+      "CoreCooking.Tests/Parsers/IngredientParserTests.cs"
     ],
     "source-test-file-paths": [
       {
