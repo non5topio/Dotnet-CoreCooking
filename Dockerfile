@@ -5,7 +5,7 @@ WORKDIR /app
 # Copy solution and project files
 COPY *.sln ./
 COPY CoreCooking.Models/*.csproj ./CoreCooking.Models/
-COPY CoreCooking.Api/*.csproj ./CoreCooking.Api/
+COPY CoreCooking.API/*.csproj ./CoreCooking.API/
 COPY CoreCooking.Website/*.csproj ./CoreCooking.Website/
 COPY CoreCooking.Domain/*.csproj ./CoreCooking.Domain/
 COPY CoreCooking.Tests/*.csproj ./CoreCooking.Tests/
