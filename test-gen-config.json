@@ -3,7 +3,8 @@
   "increase-coverage": {
     "project-name": "corecooking",
     "target-branches": [
-      "main"
+      "main",
+      "master"
     ],
     "test-env-docker-stage": "test",
     "build-test-env-docker-stage-script-path": "tool/build-test-env-docker-stage.sh",
