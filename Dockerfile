@@ -2,18 +2,7 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS test
 
 WORKDIR /app
 
-# Copy solution file first
-COPY *.sln ./
-
-# Copy project files - use conditional copying to handle case sensitivity
-COPY CoreCooking.Models/*.csproj ./CoreCooking.Models/ 2>/dev/null || true
-COPY CoreCooking.API/*.csproj ./CoreCooking.API/ 2>/dev/null || true
-COPY CoreCooking.Api/*.csproj ./CoreCooking.Api/ 2>/dev/null || true
-COPY CoreCooking.Website/*.csproj ./CoreCooking.Website/ 2>/dev/null || true
-COPY CoreCooking.Domain/*.csproj ./CoreCooking.Domain/ 2>/dev/null || true
-COPY CoreCooking.Tests/*.csproj ./CoreCooking.Tests/ 2>/dev/null || true
-
-# Copy the rest of the code first, then restore
+# Copy everything first to avoid case sensitivity and missing file issues
 COPY . .
 
 # Restore dependencies
