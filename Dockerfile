@@ -8,8 +8,8 @@ COPY . .
 # Restore dependencies
 RUN dotnet restore
 
-# Install ReportGenerator tool for coverage reports
-RUN dotnet tool install -g dotnet-reportgenerator-globaltool
+# Install ReportGenerator tool for coverage reports (compatible version for .NET 5.0)
+RUN dotnet tool install -g dotnet-reportgenerator-globaltool --version 4.8.12
 
 # Add dotnet tools to PATH
 ENV PATH="${PATH}:/root/.dotnet/tools"
