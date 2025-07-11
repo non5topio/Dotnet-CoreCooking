@@ -5,18 +5,19 @@ WORKDIR /app
 # Copy solution file first
 COPY *.sln ./
 
-# Copy project files (only copy what exists)
-COPY CoreCooking.Models/*.csproj ./CoreCooking.Models/
-COPY CoreCooking.API/*.csproj ./CoreCooking.API/
-COPY CoreCooking.Website/*.csproj ./CoreCooking.Website/
-COPY CoreCooking.Domain/*.csproj ./CoreCooking.Domain/
-COPY CoreCooking.Tests/*.csproj ./CoreCooking.Tests/
+# Copy project files - use conditional copying to handle case sensitivity
+COPY CoreCooking.Models/*.csproj ./CoreCooking.Models/ 2>/dev/null || true
+COPY CoreCooking.API/*.csproj ./CoreCooking.API/ 2>/dev/null || true
+COPY CoreCooking.Api/*.csproj ./CoreCooking.Api/ 2>/dev/null || true
+COPY CoreCooking.Website/*.csproj ./CoreCooking.Website/ 2>/dev/null || true
+COPY CoreCooking.Domain/*.csproj ./CoreCooking.Domain/ 2>/dev/null || true
+COPY CoreCooking.Tests/*.csproj ./CoreCooking.Tests/ 2>/dev/null || true
+
+# Copy the rest of the code first, then restore
+COPY . .
 
 # Restore dependencies
 RUN dotnet restore
-
-# Copy the rest of the code
-COPY . .
 
 # Install ReportGenerator tool for coverage reports
 RUN dotnet tool install -g dotnet-reportgenerator-globaltool
