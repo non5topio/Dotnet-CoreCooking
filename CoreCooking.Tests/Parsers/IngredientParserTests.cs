@@ -276,5 +276,215 @@ The test run failed due to a file access issue during the build process. Specifi
         }
 
 */
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a file access issue during the build process. Specifically, the file `CoreCooking.Tests.pdb` could not be copied because it was locked by another process, leading to a build error.
+
+**Recommended Fix:**  
+- Clean the solution and rebuild:  
+  ```bash
+  dotnet clean
+  dotnet build
+  ```
+- If the issue persists, restart the environment or IDE to release any locks on the file.
+
+        [TestMethod]
+        public void TestParseLineWithNoQuantityAndNoUOM()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("Coriander");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.IsNull(item.Quantity);
+            Assert.IsNull(item.Uom);
+            Assert.AreEqual("Coriander", item.Name);
+            Assert.IsNull(item.Directions);
+        }
+
+*/
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a file access issue during the build process. Specifically, the file `CoreCooking.Tests.pdb` could not be copied because it was locked by another process, leading to a build error.
+
+**Recommended Fix:**  
+- Clean the solution and rebuild:  
+  ```bash
+  dotnet clean
+  dotnet build
+  ```
+- If the issue persists, restart the environment or IDE to release any locks on the file.
+
+        [TestMethod]
+        public void TestParseLineWithNonMatchingUOM()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("250 grams of flour");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.AreEqual(250M, item.Quantity);
+            Assert.AreEqual("g", item.Uom);
+            Assert.AreEqual("flour", item.Name);
+            Assert.IsNull(item.Directions);
+        }
+
+*/
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a file access issue during the build process. Specifically, the file `CoreCooking.Tests.pdb` could not be copied because it was locked by another process, leading to a build error.
+
+**Recommended Fix:**  
+- Clean the solution and rebuild:  
+  ```bash
+  dotnet clean
+  dotnet build
+  ```
+- If the issue persists, restart the environment or IDE to release any locks on the file.
+
+        [TestMethod]
+        public void TestParseLineWithComplexFraction()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("1 1/2 tsp Cinnamon");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.AreEqual(1.5M, item.Quantity);
+            Assert.AreEqual("tsp", item.Uom);
+            Assert.AreEqual("Cinnamon", item.Name);
+            Assert.IsNull(item.Directions);
+        }
+
+*/
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a file access issue during the build process. Specifically, the file `CoreCooking.Tests.pdb` could not be copied because it was locked by another process, leading to a build error.
+
+**Recommended Fix:**  
+- Clean the solution and rebuild:  
+  ```bash
+  dotnet clean
+  dotnet build
+  ```
+- If the issue persists, restart the environment or IDE to release any locks on the file.
+
+        [TestMethod]
+        public void TestParseLineWithMultiplePluralUOM()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("2 liters of water");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.AreEqual(2M, item.Quantity);
+            Assert.AreEqual("liters", item.Uom);
+            Assert.AreEqual("water", item.Name);
+            Assert.IsNull(item.Directions);
+        }
+
+*/
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a file access issue during the build process. Specifically, the file `CoreCooking.Tests.pdb` could not be copied because it was locked by another process, leading to a build error.
+
+**Recommended Fix:**  
+- Clean the solution and rebuild:  
+  ```bash
+  dotnet clean
+  dotnet build
+  ```
+- If the issue persists, restart the environment or IDE to release any locks on the file.
+
+        [TestMethod]
+        public void TestParseLineWithInvalidFraction()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("2/0 tsp Sugar");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.IsNull(item.Quantity);
+            Assert.IsNull(item.Uom);
+            Assert.AreEqual("tsp Sugar", item.Name);
+            Assert.IsNull(item.Directions);
+        }
+
+*/
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a file access issue during the build process. Specifically, the file `CoreCooking.Tests.pdb` could not be copied because it was locked by another process, leading to a build error.
+
+**Recommended Fix:**  
+- Clean the solution and rebuild:  
+  ```bash
+  dotnet clean
+  dotnet build
+  ```
+- If the issue persists, restart the environment or IDE to release any locks on the file.
+
+        [TestMethod]
+        public void TestParseLineWithNoUOMAndNoQuantity()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("of Salt");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.IsNull(item.Quantity);
+            Assert.IsNull(item.Uom);
+            Assert.AreEqual("Salt", item.Name);
+            Assert.IsNull(item.Directions);
+        }
+
+*/
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a file access issue during the build process. Specifically, the file `CoreCooking.Tests.pdb` could not be copied because it was locked by another process, leading to a build error.
+
+**Recommended Fix:**  
+- Clean the solution and rebuild:  
+  ```bash
+  dotnet clean
+  dotnet build
+  ```
+- If the issue persists, restart the environment or IDE to release any locks on the file.
+
+        [TestMethod]
+        public void TestParseLineWithMultipleHyphens()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("1 cup of coffee - black - no sugar");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.AreEqual(1M, item.Quantity);
+            Assert.AreEqual("cup", item.Uom);
+            Assert.AreEqual("coffee", item.Name);
+            Assert.AreEqual("black - no sugar", item.Directions);
+        }
+
+*/
     }
 }
