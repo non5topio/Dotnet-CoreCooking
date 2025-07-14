@@ -277,4 +277,193 @@ The test run failed due to a file access issue during the build process. Specifi
 
 */
     }
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a C# syntax error in `IngredientParserTests.cs`: a class was incorrectly defined inside a namespace block without using proper class syntax (`{}`), and some test methods are missing the `[TestMethod]` attribute and proper method bodies.
+
+**Recommended Fix:**  
+- Wrap all test methods inside a properly defined `[TestClass]` class.  
+- Add the `[TestMethod]` attribute to all test methods.  
+- Ensure all methods have valid bodies with `Assert` statements where necessary.
+
+        [TestMethod]
+        public void TestParseLineWithUOMInIngredientName()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("1 tsp tsp Sugar");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.AreEqual(1M, item.Quantity);
+            Assert.AreEqual("tsp", item.Uom);
+            Assert.AreEqual("tsp Sugar", item.Name);
+            Assert.IsNull(item.Directions);
+        }
+
+*/
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a C# syntax error in `IngredientParserTests.cs`: a class was incorrectly defined inside a namespace block without using proper class syntax (`{}`), and some test methods are missing the `[TestMethod]` attribute and proper method bodies.
+
+**Recommended Fix:**  
+- Wrap all test methods inside a properly defined `[TestClass]` class.  
+- Add the `[TestMethod]` attribute to all test methods.  
+- Ensure all methods have valid bodies with `Assert` statements where necessary.
+
+        [TestMethod]
+        public void TestParseLineWithNoUOMAndNoQuantity()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("of Salt");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.IsNull(item.Quantity);
+            Assert.IsNull(item.Uom);
+            Assert.AreEqual("Salt", item.Name);
+            Assert.IsNull(item.Directions);
+        }
+
+*/
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a C# syntax error in `IngredientParserTests.cs`: a class was incorrectly defined inside a namespace block without using proper class syntax (`{}`), and some test methods are missing the `[TestMethod]` attribute and proper method bodies.
+
+**Recommended Fix:**  
+- Wrap all test methods inside a properly defined `[TestClass]` class.  
+- Add the `[TestMethod]` attribute to all test methods.  
+- Ensure all methods have valid bodies with `Assert` statements where necessary.
+
+        [TestMethod]
+        public void TestParseLineWithNonMatchingUOM()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("250 grams of flour");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.AreEqual(250M, item.Quantity);
+            Assert.AreEqual("g", item.Uom);
+            Assert.AreEqual("flour", item.Name);
+            Assert.IsNull(item.Directions);
+        }
+
+*/
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a C# syntax error in `IngredientParserTests.cs`: a class was incorrectly defined inside a namespace block without using proper class syntax (`{}`), and some test methods are missing the `[TestMethod]` attribute and proper method bodies.
+
+**Recommended Fix:**  
+- Wrap all test methods inside a properly defined `[TestClass]` class.  
+- Add the `[TestMethod]` attribute to all test methods.  
+- Ensure all methods have valid bodies with `Assert` statements where necessary.
+
+        [TestMethod]
+        public void TestParseLineWithMultiplePluralUOM()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("1 liter of water");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.AreEqual(1M, item.Quantity);
+            Assert.AreEqual("liter", item.Uom);
+            Assert.AreEqual("water", item.Name);
+            Assert.IsNull(item.Directions);
+        }
+
+*/
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a C# syntax error in `IngredientParserTests.cs`: a class was incorrectly defined inside a namespace block without using proper class syntax (`{}`), and some test methods are missing the `[TestMethod]` attribute and proper method bodies.
+
+**Recommended Fix:**  
+- Wrap all test methods inside a properly defined `[TestClass]` class.  
+- Add the `[TestMethod]` attribute to all test methods.  
+- Ensure all methods have valid bodies with `Assert` statements where necessary.
+
+        [TestMethod]
+        public void TestParseLineWithInvalidFraction()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("2/0 tsp Sugar");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.IsNull(item.Quantity);
+            Assert.IsNull(item.Uom);
+            Assert.AreEqual("tsp Sugar", item.Name);
+            Assert.IsNull(item.Directions);
+        }
+
+*/
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a C# syntax error in `IngredientParserTests.cs`: a class was incorrectly defined inside a namespace block without using proper class syntax (`{}`), and some test methods are missing the `[TestMethod]` attribute and proper method bodies.
+
+**Recommended Fix:**  
+- Wrap all test methods inside a properly defined `[TestClass]` class.  
+- Add the `[TestMethod]` attribute to all test methods.  
+- Ensure all methods have valid bodies with `Assert` statements where necessary.
+
+        [TestMethod]
+        public void TestParseLineWithMultipleHyphens()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("1 cup of coffee - black - no sugar");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.AreEqual(1M, item.Quantity);
+            Assert.AreEqual("cup", item.Uom);
+            Assert.AreEqual("coffee", item.Name);
+            Assert.AreEqual("black - no sugar", item.Directions);
+        }
+
+*/
+/*
+FAILED TEST: **Analysis:**  
+The test run failed due to a C# syntax error in `IngredientParserTests.cs`: a class was incorrectly defined inside a namespace block without using proper class syntax (`{}`), and some test methods are missing the `[TestMethod]` attribute and proper method bodies.
+
+**Recommended Fix:**  
+- Wrap all test methods inside a properly defined `[TestClass]` class.
+- Add the `[TestMethod]` attribute to all test methods.
+- Ensure all methods have valid bodies with `Assert` statements where necessary.
+
+        [TestMethod]
+        public void TestParseLineWithComplexFraction()
+        {
+            // Arrange
+            var parser = new IngredientParser();
+        
+            // Act
+            Ingredient item = parser.ParseLine("1 1/2 tsp Cinnamon");
+        
+            // Assert
+            Assert.IsNotNull(item);
+            Assert.AreEqual(1.5M, item.Quantity);
+            Assert.AreEqual("tsp", item.Uom);
+            Assert.AreEqual("Cinnamon", item.Name);
+            Assert.IsNull(item.Directions);
+        }
+
+*/
 }
