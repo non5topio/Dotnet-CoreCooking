@@ -14,10 +14,10 @@
     "source-test-file-paths": [
       {
         "source-file-path": "CoreCooking.Models/Parsers/IngredientParser.cs",
-        "test-file-path": "CoreCooking.Tests/Parsers/IngredientParserTests.cs"
+        "test-file-path": "CoreCooking.Tests/Parsers/IngredientParserTests.cs",
+        "test-command": "dotnet test"
       }
     ],
-    "test-command": "dotnet test",
     "coverage-type": "cobertura",
     "code-coverage-report-path": "CoreCooking.Tests/TestResults/coverage.cobertura.xml",
     "desired-coverage": 100,
