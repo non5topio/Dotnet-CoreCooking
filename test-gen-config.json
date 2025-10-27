@@ -15,7 +15,7 @@
       {
         "source-file-path": "CoreCooking.Models/Parsers/IngredientParser.cs",
         "test-file-path": "CoreCooking.Tests/Parsers/IngredientParserTests.cs",
-        "test-command": "dotnet test"
+        "test-command": "dotnet test CoreCooking.Tests/CoreCooking.Tests.csproj --filter FullyQualifiedName~CoreCooking.Parsers.IngredientParserTests /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./TestResults/"
       }
     ],
     "coverage-type": "cobertura",
