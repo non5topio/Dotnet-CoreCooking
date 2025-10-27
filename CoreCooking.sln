@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCooking.Api", "CoreCooking.Api\CoreCooking.Api.csproj", "{AAEE0601-FEC4-4CBF-AF6C-C08E58D9F089}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCooking.API", "CoreCooking.API\CoreCooking.API.csproj", "{AAEE0601-FEC4-4CBF-AF6C-C08E58D9F089}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreCooking.Domain", "CoreCooking.Domain\CoreCooking.Domain.csproj", "{54F64084-BD7B-481D-880B-A631D0FD8E36}"
 EndProject
