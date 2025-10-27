@@ -93,5 +93,6 @@ namespace CoreCooking.Parsers
             Assert.AreEqual("Ginger", item.Name);
             Assert.AreEqual(null, item.Directions);
         }
+
     }
 }
